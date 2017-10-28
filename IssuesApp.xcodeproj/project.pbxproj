@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D966341BB7565C1614DFA01 /* Pods_IssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */; };
+		CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */; };
 		CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */; };
-		CAC8AC721FA46E880036EC44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC8AC711FA46E880036EC44 /* ViewController.swift */; };
 		CAC8AC751FA46E880036EC44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC731FA46E880036EC44 /* Main.storyboard */; };
 		CAC8AC771FA46E880036EC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC761FA46E880036EC44 /* Assets.xcassets */; };
 		CAC8AC7A1FA46E880036EC44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC781FA46E880036EC44 /* LaunchScreen.storyboard */; };
@@ -18,9 +18,9 @@
 /* Begin PBXFileReference section */
 		AE71E9521034E1CAECEA9EF9 /* Pods-IssuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.release.xcconfig"; sourceTree = "<group>"; };
 		BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAC8AC6C1FA46E870036EC44 /* IssuesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssuesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAC8AC711FA46E880036EC44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAC8AC741FA46E880036EC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAC8AC761FA46E880036EC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAC8AC791FA46E880036EC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA7EC7AC1FA4748000C77E7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CAC8AC631FA46E870036EC44 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +86,8 @@
 		CAC8AC6E1FA46E870036EC44 /* IssuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA7EC7AC1FA4748000C77E7E /* View */,
 				CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */,
-				CAC8AC711FA46E880036EC44 /* ViewController.swift */,
 				CAC8AC731FA46E880036EC44 /* Main.storyboard */,
 				CAC8AC761FA46E880036EC44 /* Assets.xcassets */,
 				CAC8AC781FA46E880036EC44 /* LaunchScreen.storyboard */,
@@ -223,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC8AC721FA46E880036EC44 /* ViewController.swift in Sources */,
+				CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */,
 				CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

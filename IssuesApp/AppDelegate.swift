@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,5 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {   // 다른 앱에서 우리 앱으로 호출을 해서 들어올 때 호출되는 함수.
+        if url.host == "oauth-callback" {   // 웹으로 갔다가 앱으로 돌아왔을때, 여기에 url을 넘겨준다.
+            OAuthSwift.handle(url: url)
+        }
+        return true
+    }
 }
 
