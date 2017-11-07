@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D966341BB7565C1614DFA01 /* Pods_IssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */; };
+		CA4250C01FB1448800549A40 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4250BF1FB1448800549A40 /* Model.swift */; };
+		CA4250C31FB1466D00549A40 /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4250C21FB1466D00549A40 /* DataRequest+Extension.swift */; };
 		CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */; };
 		CA7EC7B11FA4812B00C77E7E /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */; };
 		CA7EC7B31FA482EE00C77E7E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7B21FA482EE00C77E7E /* API.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		AE71E9521034E1CAECEA9EF9 /* Pods-IssuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.release.xcconfig"; sourceTree = "<group>"; };
 		BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4250BF1FB1448800549A40 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CA4250C21FB1466D00549A40 /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
 		CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 		CA7EC7B21FA482EE00C77E7E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -63,6 +67,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA4250BE1FB1447B00549A40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA4250BF1FB1448800549A40 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA4250C11FB1465E00549A40 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA4250C21FB1466D00549A40 /* DataRequest+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CA4250C41FB146E200549A40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA7EC7B21FA482EE00C77E7E /* API.swift */,
+			);
+			name = API;
+			path = "몌ㅑ";
+			sourceTree = "<group>";
+		};
 		CA7EC7AC1FA4748000C77E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +103,9 @@
 		CA7EC7AF1FA4810800C77E7E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				CA4250C11FB1465E00549A40 /* Extension */,
+				CA4250C41FB146E200549A40 /* API */,
 				CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */,
-				CA7EC7B21FA482EE00C77E7E /* API.swift */,
 				CA7EC7B41FA4840500C77E7E /* App.swift */,
 			);
 			path = Util;
@@ -102,8 +132,9 @@
 		CAC8AC6E1FA46E870036EC44 /* IssuesApp */ = {
 			isa = PBXGroup;
 			children = (
-				CA7EC7AF1FA4810800C77E7E /* Util */,
+				CA4250BE1FB1447B00549A40 /* Model */,
 				CA7EC7AC1FA4748000C77E7E /* View */,
+				CA7EC7AF1FA4810800C77E7E /* Util */,
 				CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */,
 				CAC8AC731FA46E880036EC44 /* Main.storyboard */,
 				CAC8AC761FA46E880036EC44 /* Assets.xcassets */,
@@ -251,6 +282,8 @@
 				CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */,
 				CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */,
 				CA7EC7B31FA482EE00C77E7E /* API.swift in Sources */,
+				CA4250C01FB1448800549A40 /* Model.swift in Sources */,
+				CA4250C31FB1466D00549A40 /* DataRequest+Extension.swift in Sources */,
 				CA7EC7B51FA4840500C77E7E /* App.swift in Sources */,
 				CA7EC7B11FA4812B00C77E7E /* GlobalState.swift in Sources */,
 			);
