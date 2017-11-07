@@ -14,6 +14,9 @@ final class GlobalState {
     enum Constants: String {
         case tokenKey
         case refreshTokenKey
+        case ownerKey
+        case repoKey
+        case reposKey       // owner와 repo이름을 Tuple로 받아서 Dictionary로 받아서 Array로 저장할 것임
     }
     
     var token: String? { //computed prop.
@@ -34,6 +37,50 @@ final class GlobalState {
         set {
             UserDefaults.standard.set(newValue, forKey: Constants.refreshTokenKey.rawValue)        // Key를 통해서 값을 세팅
         }
+    }
+    
+    var owner: String {
+        get {
+            let owner = UserDefaults.standard.string(forKey: Constants.ownerKey.rawValue) ?? ""
+            return owner
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.ownerKey.rawValue)
+        }
+    }
+    
+    var repo: String {
+        get {
+            let owner = UserDefaults.standard.string(forKey: Constants.repoKey.rawValue) ?? ""
+            return owner
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.repoKey.rawValue)
+        }
+    }
+    
+    var isLoggedIn: Bool {
+        let isEmpty = token?.isEmpty ?? true        // 비어 있으면 값이 있는거니까 ? true
+        return !isEmpty
+    }
+    
+    var repos: [(owner: String, repo: String)] {
+        let repoDicts: [[String: String]] = UserDefaults.standard.array(forKey: Constants.reposKey.rawValue) as? [[String: String]] ?? []
+        let repos = repoDicts.map { (repoDict:[String: String]) -> (String, String) in
+            let owner = repoDict["owner"] ?? ""
+            let repo = repoDict["repo"] ?? ""
+            return (owner, repo)
+        }
+        return repos
+    }
+    
+    func addRepo(owner: String, repo: String) {
+        let dict = ["owner": owner, "repo": repo]
+        var repos: [[String: String]] = UserDefaults.standard.array(forKey: Constants.reposKey.rawValue) as? [[String: String]] ?? []
+        repos.append(dict)
+        
+        // NSSet(array: repos).allObjects - 집합으로 만들어서 중복제거하고, 유저디폴트에 넣음
+        UserDefaults.standard.set(NSSet(array: repos).allObjects, forKey: Constants.reposKey.rawValue)
     }
 }
 

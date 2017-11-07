@@ -12,10 +12,21 @@
 		CA7EC7B11FA4812B00C77E7E /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */; };
 		CA7EC7B31FA482EE00C77E7E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7B21FA482EE00C77E7E /* API.swift */; };
 		CA7EC7B51FA4840500C77E7E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EC7B41FA4840500C77E7E /* App.swift */; };
+		CAAA85231FAD896F006EB9FD /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA85221FAD896F006EB9FD /* DataRequest+Extension.swift */; };
+		CAAA85251FAD8DF8006EB9FD /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA85241FAD8DF8006EB9FD /* RepoViewController.swift */; };
+		CAAA85271FAD95D3006EB9FD /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA85261FAD95D3006EB9FD /* IssuesViewController.swift */; };
+		CAAA85291FAD9DF4006EB9FD /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA85281FAD9DF4006EB9FD /* ReposViewController.swift */; };
+		CAAA852C1FADA6DF006EB9FD /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA852B1FADA6DF006EB9FD /* IssueCell.xib */; };
+		CAAA852E1FADACE1006EB9FD /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA852D1FADACE1006EB9FD /* IssueCell.swift */; };
+		CAAA85301FADB813006EB9FD /* LoadMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAA852F1FADB813006EB9FD /* LoadMoreFooterView.xib */; };
+		CAAA85321FADB88D006EB9FD /* LoadMoreFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA85311FADB88D006EB9FD /* LoadMoreFooterView.swift */; };
 		CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */; };
 		CAC8AC751FA46E880036EC44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC731FA46E880036EC44 /* Main.storyboard */; };
 		CAC8AC771FA46E880036EC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC761FA46E880036EC44 /* Assets.xcassets */; };
 		CAC8AC7A1FA46E880036EC44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC8AC781FA46E880036EC44 /* LaunchScreen.storyboard */; };
+		CAD61DE91FAD7F290088777B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD61DE81FAD7F290088777B /* Model.swift */; };
+		CAD61DEC1FAD829C0088777B /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD61DEB1FAD829C0088777B /* GitHubAPI.swift */; };
+		CAD61DEE1FAD82D00088777B /* GitHubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD61DED1FAD82D00088777B /* GitHubRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +36,23 @@
 		CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 		CA7EC7B21FA482EE00C77E7E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CA7EC7B41FA4840500C77E7E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CAAA85221FAD896F006EB9FD /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
+		CAAA85241FAD8DF8006EB9FD /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		CAAA85261FAD95D3006EB9FD /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
+		CAAA85281FAD9DF4006EB9FD /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		CAAA852B1FADA6DF006EB9FD /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
+		CAAA852D1FADACE1006EB9FD /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
+		CAAA852F1FADB813006EB9FD /* LoadMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadMoreFooterView.xib; path = ../../../../../../../Volumes/Transcend/Swift/RxSwiftInFastCampus/IssuesApp/IssuesApp/View/Cell/LoadMoreFooterView.xib; sourceTree = "<group>"; };
+		CAAA85311FADB88D006EB9FD /* LoadMoreFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreFooterView.swift; sourceTree = "<group>"; };
 		CAC8AC6C1FA46E870036EC44 /* IssuesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssuesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAC8AC741FA46E880036EC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAC8AC761FA46E880036EC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAC8AC791FA46E880036EC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAC8AC7B1FA46E880036EC44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD61DE81FAD7F290088777B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CAD61DEB1FAD829C0088777B /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		CAD61DED1FAD82D00088777B /* GitHubRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRouter.swift; sourceTree = "<group>"; };
 		D8BA713FF4EE23C33E1BD58A /* Pods-IssuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +88,11 @@
 		CA7EC7AC1FA4748000C77E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAAA852A1FADA6CB006EB9FD /* Cell */,
 				CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */,
+				CAAA85241FAD8DF8006EB9FD /* RepoViewController.swift */,
+				CAAA85281FAD9DF4006EB9FD /* ReposViewController.swift */,
+				CAAA85261FAD95D3006EB9FD /* IssuesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -74,11 +100,22 @@
 		CA7EC7AF1FA4810800C77E7E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				CAD61DEA1FAD826F0088777B /* API */,
 				CA7EC7B01FA4812B00C77E7E /* GlobalState.swift */,
-				CA7EC7B21FA482EE00C77E7E /* API.swift */,
 				CA7EC7B41FA4840500C77E7E /* App.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		CAAA852A1FADA6CB006EB9FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CAAA852F1FADB813006EB9FD /* LoadMoreFooterView.xib */,
+				CAAA85311FADB88D006EB9FD /* LoadMoreFooterView.swift */,
+				CAAA852B1FADA6DF006EB9FD /* IssueCell.xib */,
+				CAAA852D1FADACE1006EB9FD /* IssueCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CAC8AC631FA46E870036EC44 = {
@@ -102,6 +139,7 @@
 		CAC8AC6E1FA46E870036EC44 /* IssuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				CAD61DE71FAD7F180088777B /* Model */,
 				CA7EC7AF1FA4810800C77E7E /* Util */,
 				CA7EC7AC1FA4748000C77E7E /* View */,
 				CAC8AC6F1FA46E880036EC44 /* AppDelegate.swift */,
@@ -111,6 +149,25 @@
 				CAC8AC7B1FA46E880036EC44 /* Info.plist */,
 			);
 			path = IssuesApp;
+			sourceTree = "<group>";
+		};
+		CAD61DE71FAD7F180088777B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAD61DE81FAD7F290088777B /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAD61DEA1FAD826F0088777B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA7EC7B21FA482EE00C77E7E /* API.swift */,
+				CAD61DEB1FAD829C0088777B /* GitHubAPI.swift */,
+				CAD61DED1FAD82D00088777B /* GitHubRouter.swift */,
+				CAAA85221FAD896F006EB9FD /* DataRequest+Extension.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +232,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAA85301FADB813006EB9FD /* LoadMoreFooterView.xib in Resources */,
 				CAC8AC7A1FA46E880036EC44 /* LaunchScreen.storyboard in Resources */,
 				CAC8AC771FA46E880036EC44 /* Assets.xcassets in Resources */,
 				CAC8AC751FA46E880036EC44 /* Main.storyboard in Resources */,
+				CAAA852C1FADA6DF006EB9FD /* IssueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +307,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAA85291FAD9DF4006EB9FD /* ReposViewController.swift in Sources */,
 				CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */,
+				CAD61DEE1FAD82D00088777B /* GitHubRouter.swift in Sources */,
 				CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */,
 				CA7EC7B31FA482EE00C77E7E /* API.swift in Sources */,
+				CAD61DE91FAD7F290088777B /* Model.swift in Sources */,
 				CA7EC7B51FA4840500C77E7E /* App.swift in Sources */,
+				CAAA85231FAD896F006EB9FD /* DataRequest+Extension.swift in Sources */,
+				CAAA85321FADB88D006EB9FD /* LoadMoreFooterView.swift in Sources */,
+				CAD61DEC1FAD829C0088777B /* GitHubAPI.swift in Sources */,
+				CAAA85251FAD8DF8006EB9FD /* RepoViewController.swift in Sources */,
+				CAAA852E1FADACE1006EB9FD /* IssueCell.swift in Sources */,
+				CAAA85271FAD95D3006EB9FD /* IssuesViewController.swift in Sources */,
 				CA7EC7B11FA4812B00C77E7E /* GlobalState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

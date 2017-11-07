@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    static var viewController: LoginViewController {
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+            return LoginViewController()
+        }
+        return viewController
+    }
     
     
     override func viewDidLoad() {
@@ -19,7 +25,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginToGitHubButtonTapped(_ sender: UIButton) {
-        App.api.getToken {
+        App.api.getToken { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
             
         }
         

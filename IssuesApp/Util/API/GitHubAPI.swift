@@ -1,18 +1,18 @@
 //
-//  API.swift
+//  GitHubAPI.swift
 //  IssuesApp
 //
-//  Created by Minki on 2017. 10. 28..
+//  Created by Minki on 2017. 11. 4..
 //  Copyright © 2017년 devming. All rights reserved.
 //
 
 import Foundation
 import OAuthSwift
+import Alamofire
+import SwiftyJSON
 
-protocol API {
-    func getToken(handler: @escaping (() -> Void))
-    func tokenRefresh(handler: @escaping (() -> Void))
-}
+/// repoIssues서 불러올 핸들러 정의
+typealias IssuesResponseHandler = (DataResponse<[Model.Issue]>) -> Void     // DataResponse가 에러코드 같은걸 가지고 있어서 error처리를 해줌
 
 struct GitHubAPI: API {     // API를 구현하는 구조체
     // 2. oauth 객체 만들기
@@ -55,4 +55,33 @@ struct GitHubAPI: API {     // API를 구현하는 구조체
         })
     }
     
+    /**
+     GitHubRouter만들고 나서 이거 만듦
+     */
+    /// 원하는 Issue를 불러오는 기능  - API하나 정의한거임.
+//    func repoIssues(owner: String, repo: String, page: Int, handler: @escaping IssuesResponseHandler) {
+//        let parameters: Parameters = ["page": page, "state": "all"] // open된것과 closed된것 모두 볼것임
+//        GitHubRouter.manager.request(GitHubRouter.repoIssues(owner: owner, repo: repo, parammeter: parameters))
+//            .responseSwiftyJSON { (dataResponse: DataResponse<JSON>) in
+//                let result: DataResponse<[Model.Issue]> = dataResponse.map({ (json: JSON) -> [Model.Issue] in
+//                    return json.arrayValue.map({(json) -> Model.Issue in
+//                        return Model.Issue(json: json)
+//                    })      // 비어있으면 empty List를 반환
+//                })   // map으로 JSON
+//                handler(result)
+//        }
+//    }
+    
+    
+    func repoIssues(owner: String, repo: String, page: Int, handler: @escaping IssuesResponseHandler) -> Void {
+        let parameters: Parameters = ["page": page, "state": "all"]
+        GitHubRouter.manager.request(GitHubRouter.repoIssues(owner: owner, repo: repo, parameter: parameters)).responseSwiftyJSON { (dataResponse: DataResponse<JSON>) in
+            let result = dataResponse.map({ (json: JSON) -> [Model.Issue] in
+                return json.arrayValue.map {
+                    Model.Issue(json: $0)
+                }
+            })
+            handler(result)
+        }
+    }
 }
