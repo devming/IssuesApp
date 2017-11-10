@@ -73,6 +73,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA09C9641FB6691700E99E8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CA4250BE1FB1447B00549A40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +108,7 @@
 		CA7EC7AC1FA4748000C77E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA09C9641FB6691700E99E8B /* Cell */,
 				CA7EC7AD1FA4749800C77E7E /* LoginViewController.swift */,
 				CA4250C51FB19AC600549A40 /* RepoViewController.swift */,
 				CA09C9601FB5E59500E99E8B /* IssuesViewController.swift */,

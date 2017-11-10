@@ -17,6 +17,16 @@ class IssuesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup()
+    }
+}
+
+extension IssuesViewController {
+    func setup() {
+        load()
+    }
+    
+    func load() {
         App.api.repoIssues(owner: owner, repo: repo, page: 1, handler: { (response: DataResponse<[Model.Issue]>) in
             switch response.result {
             case .success(let items):
@@ -26,5 +36,9 @@ class IssuesViewController: UIViewController {
                 break
             }
         })
+    }
+    
+    func dataLoaded(items: [Model.Issue]) {
+        
     }
 }
