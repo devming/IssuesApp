@@ -112,6 +112,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-ZN-1Un">
                                         <rect key="frame" x="0.0" y="80" width="355" height="30"/>
                                         <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <segue destination="Sha-pR-Sfv" kind="show" identifier="EnterRepoSegue" id="OF0-o7-OiU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKy-YD-bM6">
                                         <rect key="frame" x="0.0" y="120" width="355" height="30"/>
@@ -150,6 +153,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vz6-78-0wH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1092" y="-639"/>
+        </scene>
+        <!--Issues-->
+        <scene sceneID="Gt3-Zj-HV6">
+            <objects>
+                <viewController title="Issues" id="Sha-pR-Sfv" customClass="IssuesViewController" customModule="IssuesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JhG-bX-EwW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qPm-Qy-ogr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZY-kI-Hd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="-636"/>
         </scene>
     </scenes>
 </document>

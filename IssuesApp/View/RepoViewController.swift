@@ -6,7 +6,6 @@
 //  Copyright © 2017년 devming. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class RepoViewController: UIViewController {
@@ -15,8 +14,23 @@ class RepoViewController: UIViewController {
     @IBOutlet weak var repoTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        ownerTextField.text = GlobalState.instance.owner
+        repoTextField.text = GlobalState.instance.repo
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard let owner = ownerTextField.text, let repo = repoTextField.text else { return false }
+        return !(owner.isEmpty || repo.isEmpty)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "EnterRepoSegue" {
+            guard let owner = ownerTextField.text, let repo = repoTextField.text else { return }
+            GlobalState.instance.owner = owner
+            GlobalState.instance.repo = repo
+        }
+    }
     
 }
 
