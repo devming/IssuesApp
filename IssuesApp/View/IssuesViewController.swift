@@ -30,11 +30,11 @@ extension DatasourceRefreshable {
 class IssuesViewController: UIViewController, DatasourceRefreshable {
     var needRefreshDatasource: Bool = false
     
-    var datasource: [Model.Issue] = []
     fileprivate let estimateCell: IssueCell = IssueCell.cellFromNib
     @IBOutlet weak var collectionView: UICollectionView!
     lazy var owner: String = { return GlobalState.instance.owner }()
     lazy var repo: String  = { return GlobalState.instance.repo }()
+    var datasource: [Model.Issue] = []
     let refreshControl = UIRefreshControl()
     var loadMoreCell: LoadMoreFooterView?
     var canLoadMore: Bool = true
