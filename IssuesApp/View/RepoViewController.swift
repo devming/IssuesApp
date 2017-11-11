@@ -19,8 +19,10 @@ class RepoViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard let owner = ownerTextField.text, let repo = repoTextField.text else { return false }
-        return !(owner.isEmpty || repo.isEmpty)
+        if identifier == "EnterRepoSegue", let owner = ownerTextField.text, let repo = repoTextField.text {
+            return !(owner.isEmpty || repo.isEmpty)
+        }
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
