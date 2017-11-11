@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol CellProtocol {
+    associatedtype Item
+    func update(data: Item)
+    static var cellFromNib: Self { get }
+}
+
 class IssueCell: UICollectionViewCell {
     @IBOutlet weak var stateButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,7 +21,9 @@ class IssueCell: UICollectionViewCell {
     @IBOutlet weak var commentCountButton: UIButton!
 }
 
-extension IssueCell {
+extension IssueCell: CellProtocol {
+    typealias Item = Model.Issue
+    
     static var cellFromNib: IssueCell {
         guard let cell = Bundle.main.loadNibNamed("IssueCell", owner: nil, options: nil)?.first as? IssueCell else {
             return IssueCell()
@@ -31,7 +39,7 @@ extension IssueCell {
         commentCountButton.setTitle("\(issue.comments)", for: .normal)
         stateButton.isSelected = issue.state == .closed
         let commentCountHidden: Bool = issue.comments == 0
-        commentCountButton.isHidden = commentCountHidden
+        commentCountButton.alpha = commentCountHidden ? 0 : 1
     }
 }
 
