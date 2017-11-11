@@ -167,9 +167,30 @@
                     <view key="view" contentMode="scaleToFill" id="JhG-bX-EwW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iwp-9l-KmY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CZk-s9-4lv">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qPm-Qy-ogr" firstAttribute="bottom" secondItem="iwp-9l-KmY" secondAttribute="bottom" id="4Oq-eZ-77r"/>
+                            <constraint firstItem="qPm-Qy-ogr" firstAttribute="trailing" secondItem="iwp-9l-KmY" secondAttribute="trailing" id="9lN-Oc-MQ6"/>
+                            <constraint firstItem="iwp-9l-KmY" firstAttribute="top" secondItem="qPm-Qy-ogr" secondAttribute="top" id="EnK-81-wME"/>
+                            <constraint firstItem="iwp-9l-KmY" firstAttribute="leading" secondItem="qPm-Qy-ogr" secondAttribute="leading" id="tGr-n8-blk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qPm-Qy-ogr"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="iwp-9l-KmY" id="n4Y-ph-ZGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZY-kI-Hd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,14 +246,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gOl-ls-3al">
-                                                    <rect key="frame" x="74" y="0.0" width="286" height="43"/>
+                                                    <rect key="frame" x="74" y="0.0" width="286" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Octocat" id="Eb1-yD-n5F">
-                                                    <rect key="frame" x="15" y="0.0" width="44" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
