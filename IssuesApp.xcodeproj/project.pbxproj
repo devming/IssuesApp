@@ -10,6 +10,8 @@
 		2D966341BB7565C1614DFA01 /* Pods_IssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */; };
 		CA09C9611FB5E59500E99E8B /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09C9601FB5E59500E99E8B /* IssuesViewController.swift */; };
 		CA09C9631FB65ED200E99E8B /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09C9621FB65ED200E99E8B /* ReposViewController.swift */; };
+		CA09C9661FB669AC00E99E8B /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09C9651FB669AC00E99E8B /* IssueCell.swift */; };
+		CA09C9681FB669E500E99E8B /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA09C9671FB669E500E99E8B /* IssueCell.xib */; };
 		CA4250C01FB1448800549A40 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4250BF1FB1448800549A40 /* Model.swift */; };
 		CA4250C31FB1466D00549A40 /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4250C21FB1466D00549A40 /* DataRequest+Extension.swift */; };
 		CA4250C61FB19AC600549A40 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4250C51FB19AC600549A40 /* RepoViewController.swift */; };
@@ -28,6 +30,8 @@
 		BCEB0C899CE37A212615FD91 /* Pods_IssuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA09C9601FB5E59500E99E8B /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		CA09C9621FB65ED200E99E8B /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		CA09C9651FB669AC00E99E8B /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
+		CA09C9671FB669E500E99E8B /* IssueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
 		CA4250BF1FB1448800549A40 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CA4250C21FB1466D00549A40 /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
 		CA4250C51FB19AC600549A40 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		CA09C9641FB6691700E99E8B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CA09C9651FB669AC00E99E8B /* IssueCell.swift */,
+				CA09C9671FB669E500E99E8B /* IssueCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				CAC8AC7A1FA46E880036EC44 /* LaunchScreen.storyboard in Resources */,
 				CAC8AC771FA46E880036EC44 /* Assets.xcassets in Resources */,
 				CAC8AC751FA46E880036EC44 /* Main.storyboard in Resources */,
+				CA09C9681FB669E500E99E8B /* IssueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4250C61FB19AC600549A40 /* RepoViewController.swift in Sources */,
+				CA09C9661FB669AC00E99E8B /* IssueCell.swift in Sources */,
 				CA7EC7AE1FA4749800C77E7E /* LoginViewController.swift in Sources */,
 				CA09C9631FB65ED200E99E8B /* ReposViewController.swift in Sources */,
 				CAC8AC701FA46E880036EC44 /* AppDelegate.swift in Sources */,
