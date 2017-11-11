@@ -14,11 +14,12 @@ protocol CellProtocol {
     static var cellFromNib: Self { get }
 }
 
-class IssueCell: UICollectionViewCell {
-    @IBOutlet weak var stateButton: UIButton!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var commentCountButton: UIButton!
+
+final class IssueCell: UICollectionViewCell {
+    @IBOutlet var stateButton: UIButton!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var commentCountButton: UIButton!
 }
 
 extension IssueCell: CellProtocol {
@@ -51,3 +52,5 @@ extension Date {
         return format.string(from: self)
     }
 }
+
+
