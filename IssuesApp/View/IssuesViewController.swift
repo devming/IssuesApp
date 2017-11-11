@@ -9,13 +9,33 @@
 import UIKit
 import Alamofire /// alamofire 설명 - http://rhammer.tistory.com/115
 
-class IssuesViewController: UIViewController {
+protocol DatasourceRefreshable: class {
+    associatedtype Item
+    var datasource: [Item] { get set }
+    var needRefreshDatasource: Bool { get set }
+}
+
+extension DatasourceRefreshable {
+    func setNeedRefreshDatasource() {
+        needRefreshDatasource = true
+    }
+    func refreshDataSourceIfNeeded() {
+        if needRefreshDatasource {
+            datasource = []
+            needRefreshDatasource = false
+        }
+    }
+}
+
+class IssuesViewController: UIViewController, DatasourceRefreshable {
+    var needRefreshDatasource: Bool = false
     
     let owner = GlobalState.instance.owner
     let repo = GlobalState.instance.repo
     var datasource: [Model.Issue] = []
     fileprivate let estimateCell: IssueCell = IssueCell.cellFromNib
     @IBOutlet weak var collectionView: UICollectionView!
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +49,9 @@ extension IssuesViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "IssueCell", bundle: nil), forCellWithReuseIdentifier: "IssueCell")
+        collectionView.refreshControl = refreshControl
+        collectionView.alwaysBounceVertical = true
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         load()
     }
     
@@ -47,8 +70,16 @@ extension IssuesViewController {
     }
     
     func dataLoaded(items: [Model.Issue]) {
+        refreshDataSourceIfNeeded()
+        
+        refreshControl.endRefreshing()
         datasource = items
         collectionView.reloadData()
+    }
+    
+    @objc func refresh() {
+        setNeedRefreshDatasource()
+        load()
     }
 }
 
